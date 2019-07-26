@@ -4,11 +4,11 @@ Personal configuration files for Linux distro environment.
 
 ## Overview
 
-* [i3]()
+* [i3](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/i3)
 
-* [polybar]()
+* [polybar](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/polybar)
 
-* [rofi]()
+* [rofi](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/rofi)
 
 
 ## Contributing
@@ -17,4 +17,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## License
 
-Configuration files are under the [Apache License, version 2.0 ]().
+Configuration files are under the [Apache License, version 2.0 ](https://github.com/AndrewMalitchuk/linux-config-files/blob/master/LICENSE).
