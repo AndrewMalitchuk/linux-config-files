@@ -1,0 +1,99 @@
+[colors]
+background = #263238
+foreground = #CFD8DC
+primary = #FFC107
+alert = #f44336
+tab = #37474F
+
+[bar/main]
+bottom = true
+font-0 = "Roboto:size=10:2"
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 3
+border-size = 0
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+modules-left = i3
+modules-center = 
+modules-right = pulseaudio wlan cpu memory xkeyboard date powermenu
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = scroll lock
+label-layout-underline = ${colors.primary}
+label-indicator-padding = 1
+label-indicator-margin = 1
+label-indicator-background = ${colors.primary}
+label-indicator-foreground = ${colors.background}
+label-indicator-underline = ${colors.background}
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %a %d-%m
+time = %H:%M
+format = <label>
+label = %date% %time%
+format-foreground = ${colors.foreground}
+label-underline = ${colors.primary}
+
+[module/i3]
+type = internal/i3
+format = <label-state>
+pin-workspaces = true
+label-focused = %name%
+label-focused-foreground = ${colors.primary}
+label-focused-background = ${colors.tab}
+label-focused-underline = ${colors.primary}
+label-focused-font = 3
+label-focused-padding = 3
+label-unfocused = %name%
+label-unfocused-underline = ${colors.tab}
+label-unfocused-font = 3
+label-unfocused-padding = 3
+
+[module/memory]
+type = internal/memory
+interval = 3
+format = <label>
+label = RAM: %gb_used%
+label-underline = ${colors.primary}
+
+[module/cpu]
+type = internal/cpu
+interval = 3
+format = <label>
+label = CPU: %percentage%%
+label-underline = ${colors.primary}
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+udspeed-minwidth = 2
+accumulate-stats = true
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+; label-connected = %essid% [%signal%%] %downspeed% %upspeed%
+label-connected = %essid% [%signal%%] 
+label-connected-foreground = ${colors.foreground}
+label-connected-underline = ${colors.primary}
+label-disconnected = !WI-FI
+label-disconnected-foreground = ${colors.background}
+label-disconnected-background = ${colors.primary}
+label-disconnected-underline = ${colors.alert}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = false
+interval = 5
+format-volume = <label-volume>
+format-volume-foreground = ${colors.foreground}
+format-volume-underline = ${colors.primary}
+label-muted = muted
+label-muted-foreground = ${colors.background}
+label-muted-background = ${colors.primary}
+label-muted-underline = ${colors.background}
