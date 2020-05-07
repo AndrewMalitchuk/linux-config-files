@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=adular-material-v0.1-dark-compact
+Comment=A Material Design theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=adular-material-v0.1-dark-compact
+MetacityTheme=adular-material-v0.1-dark-compact
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24
