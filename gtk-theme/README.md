@@ -1,6 +1,6 @@
 # adular-material-v0.1
 
-Custom GTK theme based on (Material GTK Theme)[https://github.com/nana-4/materia-theme].
+Custom GTK theme based on [Material GTK Theme](https://github.com/nana-4/materia-theme).
 
 ## Usage
 
