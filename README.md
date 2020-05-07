@@ -4,12 +4,17 @@ Personal configuration files for Linux distro environment.
 
 ## Overview
 
+* [bash](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/bash)
+* [gtk-theme](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/gtk-theme)
 * [i3](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/i3)
-
 * [polybar](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/polybar)
-
 * [rofi](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/rofi)
 
+## TODO
+
+- [ ] pcmanfm
+- [ ] font 
+- [ ] READMEs
 
 ## Contributing
 
