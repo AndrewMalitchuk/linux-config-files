@@ -15,6 +15,7 @@ Personal configuration files for Linux distro environment.
 - [ ] pcmanfm
 - [ ] font 
 - [ ] READMEs
+- [ ] python config initializer
 
 ## Contributing
 
