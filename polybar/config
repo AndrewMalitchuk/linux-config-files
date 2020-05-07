@@ -1,3 +1,6 @@
+[settings]
+screenchange-reload = true
+
 [colors]
 background = #263238
 foreground = #CFD8DC
@@ -17,7 +20,7 @@ module-margin-left = 1
 module-margin-right = 1
 modules-left = i3
 modules-center = 
-modules-right = pulseaudio wlan cpu memory xkeyboard date powermenu
+modules-right = pulseaudio wlan cpu memory xkeyboard date powermenu 
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -77,10 +80,12 @@ accumulate-stats = true
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 ; label-connected = %essid% [%signal%%] %downspeed% %upspeed%
-label-connected = %essid% [%signal%%] 
+; label-connected = %essid% 
+; label-connected = WLAN: %signal% 
+label-connected =  
 label-connected-foreground = ${colors.foreground}
 label-connected-underline = ${colors.primary}
-label-disconnected = !WI-FI
+label-disconnected = !WLAN
 label-disconnected-foreground = ${colors.background}
 label-disconnected-background = ${colors.primary}
 label-disconnected-underline = ${colors.alert}
@@ -93,7 +98,30 @@ interval = 5
 format-volume = <label-volume>
 format-volume-foreground = ${colors.foreground}
 format-volume-underline = ${colors.primary}
-label-muted = muted
+label-muted = muted 婢
 label-muted-foreground = ${colors.background}
 label-muted-background = ${colors.primary}
 label-muted-underline = ${colors.background}
+
+[module/cmus]
+type = custom/script
+exec = /home/adular/.config/polybar/player-cmus.sh
+exec-if = pgrep -x cmus
+interval = 1
+click-left = cmus-remote --next
+click-right = cmus-remote --prev
+click-middle = cmus-remote --pause
+scroll-up = cmus-remote --volume +5%
+scroll-down = cmus-remote --volume -5%
+format = <label>
+label = %output%
+label-underline = ${colors.primary}
+label-maxlen = 50
+
+[module/temperature]
+type = custom/script
+exec=/home/adular/.config/polybar/cpu-temperature.sh
+interval - 300
+format = <label>
+label = [%output%]
+label-underline=${colors.primary}
