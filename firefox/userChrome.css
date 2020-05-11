@@ -1,0 +1,58 @@
+/*
+ * Auto-hide the URL-bar show on hover or focus
+ * as seen in https://www.reddit.com/r/FirefoxCSS/comments/boetx7/annoying_page_jump_with_address_bar_autohide/engne27/
+ * by https://www.reddit.com/user/SkyrimForTheDragons/
+ *
+ * slightly modified for more responsiveness
+ * 
+ * Note that this version DOES NOT hide the bookmarks toolbar!
+ */
+#nav-bar:not([customizing="true"]):not([inFullscreen]) {
+	min-height: 1px !important;
+	max-height: 0px !important;
+	margin-top: 1px !important;
+	margin-bottom: -1px !important;
+	transition: all 50ms linear 0s !important;
+	z-index: -5 !important;
+}
+
+#navigator-toolbox:hover:not([inFullscreen]) :-moz-any(#nav-bar),
+#navigator-toolbox:focus-within :-moz-any(#nav-bar) {
+	min-height: 40px !important;
+	max-height: 40px !important;
+	margin-top: 1px !important;
+	margin-bottom: -40px !important;
+	transition: all 50ms linear 0s !important;
+	z-index: 5 !important;
+}
+
+/* Needed for for FF 75 megabar */
+#urlbar {
+	--urlbar-toolbar-height: 40px !important;
+}
+
+/*
+ * Remove "Send Page to Device", "Send Link to Device", 
+ * "Send Tab to Device" from context menu.
+ *
+ * Contributor(s): PilzAdam
+ */
+
+#context-sendpagetodevice, #context-sep-sendpagetodevice,
+#context-sendlinktodevice, #context-sep-sendlinktodevice,
+#context_sendTabToDevice, #context_sendTabToDevice_separator {
+  display: none !important;
+}
+/*
+ * Description: Hides the Tracking Protection icon.
+ *
+ * Contributor(s): Joachim Vandersmissen, Strappazzon
+ */
+
+#tracking-protection-icon-box {
+  visibility: collapse !important;
+}
+
+#identity-box:hover > #tracking-protection-icon-box {
+  visibility: visible !important;
+}

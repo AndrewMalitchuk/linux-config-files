@@ -10,12 +10,15 @@ Personal configuration files for Linux distro environment.
 * [polybar](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/polybar)
 * [rofi](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/rofi)
 
-## TODO
+## TODO:
 
-- [ ] pcmanfm
-- [ ] font 
-- [ ] READMEs
-- [ ] python config initializer
+- [ ] pcmanfm;
+- [ ] Fonts ;
+- [ ] READMEs;
+- [ ] Python config initializer;
+- [ ] Firefox:
+  - [ ] userChrome.css;
+  - [ ] Start page;
 
 ## Contributing
 
