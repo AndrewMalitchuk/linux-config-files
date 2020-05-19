@@ -10,6 +10,17 @@ Personal configuration files for Linux distro environment.
 * [polybar](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/polybar)
 * [rofi](https://github.com/AndrewMalitchuk/linux-config-files/tree/master/rofi)
 
+## Accent colors
+
+* #263238
+* #CFD8DC
+* #FFC107
+* #f44336
+* #37474F
+* #484E50  
+* #292D2E   
+* #FAFAFA 
+
 ## TODO:
 
 - [ ] pcmanfm;
