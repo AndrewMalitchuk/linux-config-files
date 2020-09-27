@@ -24,12 +24,15 @@ Personal configuration files for Linux distro environment.
 ## TODO:
 
 - [ ] pcmanfm;
-- [ ] Fonts ;
+- [ ] Fonts;
 - [ ] READMEs;
 - [ ] Python config initializer;
 - [ ] Firefox:
   - [ ] userChrome.css;
   - [ ] Start page;
+  - [ ] Tweak (f.e. disable autoclose).
+- [ ] Nord theme ref;
+- [ ] Telegram theme.
 
 ## Contributing
 
