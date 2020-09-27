@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "adular-firefox-theme-v0.1",
+  "theme": {
+    "images": {},
+    "properties": {},
+    "colors": {
+      "toolbar": "rgb(55, 71, 79)",
+      "toolbar_text": "rgb(255, 193, 7)",
+      "frame": "rgb(38, 50, 56)",
+      "tab_background_text": "rgb(207, 216, 220)",
+      "toolbar_field": "rgb(38, 50, 56)",
+      "toolbar_field_text": "rgb(207, 216, 220)",
+      "tab_line": "rgb(255, 193, 7)",
+      "popup": "rgb(55, 71, 79)",
+      "popup_text": "rgb(207, 216, 220)",
+      "tab_loading": "rgb(255, 193, 7)"
+    }
+  }
+}

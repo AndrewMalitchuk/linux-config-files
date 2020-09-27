@@ -1,0 +1,117 @@
+[settings]
+screenchange-reload = true
+
+[colors]
+background = #2E3440
+foreground = #D8DEE9
+primary = #D8DEE9
+alert = #F44336
+tab = #4C566A
+
+[bar/main]
+bottom = true
+font-0 = "Roboto:size=10"
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 1
+border-size = 0
+padding-right = 1
+height = 25
+module-margin-left = 1
+module-margin-right = 1
+modules-left = i3
+modules-center = 
+modules-right = pulseaudio xkeyboard date
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = scroll lock
+label-indicator-padding = 1
+label-indicator-margin = 1
+label-indicator-background = ${colors.tab}
+label-indicator-foreground = ${colors.primary}
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %a %d-%m
+time = %H:%M
+format = <label>
+label = %date% %time%
+format-foreground = ${colors.foreground}
+
+[module/i3]
+type = internal/i3
+format = <label-state>
+pin-workspaces = true
+label-focused = %name%
+label-focused-foreground = ${colors.primary}
+label-focused-background = ${colors.tab}
+label-focused-font = 3
+label-focused-padding = 3
+label-unfocused = %name%
+label-unfocused-font = 3
+label-unfocused-padding = 3
+
+[module/memory]
+type = internal/memory
+interval = 3
+format = <label>
+label = RAM: %gb_used%
+label-underline = ${colors.primary}
+
+[module/cpu]
+type = internal/cpu
+interval = 3
+format = <label>
+label = CPU: %percentage%%
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+udspeed-minwidth = 2
+accumulate-stats = true
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+; label-connected = %essid% [%signal%%] %downspeed% %upspeed%
+; label-connected = %essid% 
+; label-connected = WLAN: %signal% 
+label-connected =  
+label-connected-foreground = ${colors.foreground}
+label-disconnected = !WLAN
+label-disconnected-foreground = ${colors.background}
+label-disconnected-background = ${colors.primary}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = false
+interval = 5
+format-volume = <label-volume>
+format-volume-foreground = ${colors.foreground}
+label-muted = muted
+label-muted-foreground = ${colors.foreground}
+label-muted-background = ${colors.tab}
+
+[module/cmus]
+type = custom/script
+exec = /home/adular/.config/polybar/player-cmus.sh
+exec-if = pgrep -x cmus
+interval = 1
+click-left = cmus-remote --next
+click-right = cmus-remote --prev
+click-middle = cmus-remote --pause
+scroll-up = cmus-remote --volume +5%
+scroll-down = cmus-remote --volume -5%
+format = <label>
+label = %output%
+label-underline = ${colors.primary}
+label-maxlen = 50
+
+[module/temperature]
+type = custom/script
+exec=/home/adular/.config/polybar/cpu-temperature.sh
+interval - 300
+format = <label>
+label = [%output%]

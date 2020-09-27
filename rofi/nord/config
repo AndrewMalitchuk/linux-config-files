@@ -1,0 +1,12 @@
+rofi.show-icons:            false
+rofi.modi:                  drun,run,window,ssh
+rofi.lines:                 10
+rofi.line-padding:          5
+rofi.matching:              fuzzy
+rofi.bw:                    0
+rofi.padding:               0
+rofi.separator-style:       none
+rofi.hide-scrollbar:        false
+rofi.line-margin:           1
+rofi.font:                  Roboto 10
+rofi.theme: ~/.config/rofi/material.rasi
